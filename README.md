@@ -10,6 +10,7 @@ git clone https://github.com/MohamedmDgr2010/msh.git
 ```
 ## Setup
 ```bash
+cd msh
 make
 ```  
 ## Run
