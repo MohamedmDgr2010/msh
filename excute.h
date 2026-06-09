@@ -9,11 +9,13 @@
 #include <sys/wait.h>
 #include <cstring>
 #include <sstream>
-
+ 
+#include <functional>
 
 namespace exe{
   using namespace std;
   int exec(string cmd,vector<string> args);
   int command(string cmd,vector<string> args);
   int prog(string prog,vector<char*> args);
+  bool is_program(std::string cmd);
 }// namespace excuter

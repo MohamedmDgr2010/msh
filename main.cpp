@@ -9,7 +9,6 @@
 #include "excute.h"
 #include <sys/wait.h>
 #include <cstring>
-
 using namespace std;
 
 std::vector<std::string> tokenize(const std::string& line) {
@@ -85,7 +84,14 @@ int main(){
     
     cmd=!tokens.empty() ? tokens[0]:"";
     if(cmd.empty())continue;
-    cout<<"command: "<<cmd<<endl;
+    cout << "command: " << cmd << endl;
+cout << "args: ";
+for (const auto& arg : args) {
+    cout << arg << " ";
+}
+cout << endl; // لإنتاج سطر جديد في النهاية
+
+    
     exe::exec(cmd,args);
     
     
